@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payment TaxcTzy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #89f7fe, #66a6ff);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #333;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 2rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      animation: floatIn 0.6s ease;
+    }
+
+    @keyframes floatIn {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      color: #444;
+    }
+
+    .payment-method {
+      margin: 1rem 0;
+    }
+
+    .payment-method button {
+      background: #66a6ff;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-left: 10px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .payment-method button:hover {
+      background: #4a90e2;
+    }
+
+    .link {
+      display: block;
+      margin: 0.5rem 0;
+      text-decoration: none;
+      color: #0077cc;
+    }
+
+    .socials {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .qris-img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin: 1rem 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Payment TaxcTzy</h1>
+
+    <div class="payment-method">
+      <p>Dana: <span id="dana">083145207805</span>
+        <button onclick="copyText('dana')">Salin</button>
+      </p>
+      <p>OVO: <span id="ovo">085730110727</span>
+        <button onclick="copyText('ovo')">Salin</button>
+      </p>
+      <p>GoPay: <span id="gopay">085730110727</span>
+        <button onclick="copyText('gopay')">Salin</button>
+      </p>
+    </div>
+
+    <img src="https://img1.pixhost.to/images/6195/606615017_imgtmp.png" alt="QRIS" class="qris-img">
+    <a href="https://img1.pixhost.to/images/6195/606615017_imgtmp.png" target="_blank" class="link">🔗 Link QRIS</
+
+    <div class="socials">
+      <h3>Hubungi Kami</h3>
+      <p>📷 Instagram: <a href="https://instagram.com/idkabiim" class="link" target="_blank">@idkabiim</a></p>
+      <p>✈️ Telegram: <a href="https://t.me/luister9" class="link" target="_blank">@luister9</a></p>
+      <p>📱 WhatsApp: <a href="https://wa.me/6285730110727" class="link" target="_blank">6285730110727</a></p>
+    </div>
+  </div>
+
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Nomor disalin: " + text);
+      });
+    }
+  </script>
+</body>
+</html>
